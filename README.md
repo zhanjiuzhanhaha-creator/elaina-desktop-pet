@@ -4,7 +4,9 @@
 
 项目仓库：[zhanjiuzhanhaha-creator/elaina-desktop-pet](https://github.com/zhanjiuzhanhaha-creator/elaina-desktop-pet)。
 
-在线体验预定地址：[伊蕾娜的小房间](https://elaina-playroom-tzxser.myworkspace-8830.chatgpt.site)（待部署验证）。
+在线体验：[伊蕾娜的小房间](https://elaina-playroom-tzxser.myworkspace-8830.chatgpt.site)。无需登录，电脑和手机均可打开。
+
+![伊蕾娜小房间的浏览器体验预览](docs/preview.png)
 
 ## 可以一起做什么
 
@@ -21,6 +23,8 @@
 无需账号和付费 API 即可使用内置互动。可选模型首次启用需要联网下载，之后在访问者自己的设备上计算。浏览器模型依赖 WebGPU、网络和可用内存；不兼容设备仍可体验全部内置动作与固定互动。
 
 浏览器 AI 使用 WebLLM 0.2.86 与 Qwen3-0.6B 量化模型，需主动点击启用，首次约下载 350–400 MB。优先使用支持 WebGPU 与 `shader-f16` 的桌面 Chrome / Edge；模型加载与推理速度受显卡、内存和网络影响。
+
+验证状态：桌面版自检、网页按钮与规则对话、昵称保存、猜拳、专注暂停与奖励、手机布局均已通过。浏览器 AI 的真实 WebGPU 能力检测通过；首次模型初始化尚未完成端到端验证，当前作为可选体验提供。
 
 ## Windows 版
 
