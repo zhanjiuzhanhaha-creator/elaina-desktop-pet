@@ -1,0 +1,8 @@
+﻿{
+  "Server": "local-chat/runtime/llama-server.exe",
+  "Model": "local-chat/Qwen3-0.6B-Q8_0.gguf",
+  "Endpoint": "http://127.0.0.1:18976",
+  "Runtime": "llama.cpp b11718",
+  "ModelName": "Qwen3-0.6B-Q8_0",
+  "License": "MIT / Apache-2.0"
+}

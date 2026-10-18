@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6f1">
+  <meta name="description" content="来伊蕾娜的小房间坐坐。摸摸头、抱一抱、聊聊天，或一起专注片刻。免费浏览器体验，支持手机。">
+  <title>伊蕾娜的小房间 · 在线桌宠</title>
+  <link rel="icon" href="assets/paw-cursor.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="./" class="brand"><span class="brand-star">✦</span><span>伊蕾娜的小房间<small>一点陪伴，一点小魔法</small></span></a>
+    <nav><span class="local-label"><i></i> 记录留在你的浏览器</span><a id="repoLink" href="https://github.com/zhanjiuzhanhaha-creator/elaina-desktop-pet" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav>
+  </header>
+  <main class="room-layout">
+    <section class="companion-panel" aria-label="桌宠互动区">
+      <div class="scene" id="scene">
+        <div class="room-topline"><span>ELAINA'S ROOM</span><button class="quiet-button" id="motionButton" type="button" aria-pressed="false">减少动态</button></div>
+        <div class="window-decoration" aria-hidden="true"><span class="cloud cloud-one"></span><span class="cloud cloud-two"></span></div>
+        <div class="wall-star" aria-hidden="true">✧</div>
+        <div class="speech" id="speech" role="status">你来啦。今天也想被摸摸头呀～</div>
+        <div class="floor" aria-hidden="true"></div>
+        <div class="rug" id="rug" aria-hidden="true"></div>
+        <div class="plant-decoration" aria-hidden="true"><span>❧</span><i></i></div>
+        <div class="pet-area" id="petArea" role="button" tabindex="0" aria-label="点击伊蕾娜，兔耳和爱心出现。移动到头顶可摸头。">
+          <div class="pet-root" id="petRoot">
+            <div class="pet-form normal-form active" id="normalForm">
+              <img class="sprite idle-strand" src="assets/strand.png" alt="" draggable="false">
+              <img class="sprite idle-tuft" src="assets/tuft.png" alt="" draggable="false">
+              <img class="sprite face active" data-face="idle" src="assets/idle.png" alt="银白头发、紫色眼睛的伊蕾娜抱着浅蓝色抱枕" draggable="false">
+              <img class="sprite face" data-face="half" src="assets/half.png" alt="" draggable="false">
+              <img class="sprite face" data-face="blink" src="assets/blink.png" alt="" draggable="false">
+              <img class="sprite face" data-face="mouth" src="assets/mouth.png" alt="" draggable="false">
+            </div>
+            <div class="pet-form pat-form" id="patForm" aria-hidden="true">
+              <div class="pat-head"><img class="sprite pat-core" src="assets/hover.png" alt="" draggable="false"><img class="sprite idle-tuft" src="assets/hover-tuft.png" alt="" draggable="false"><img class="sprite idle-strand" src="assets/hover-strand.png" alt="" draggable="false"></div>
+              <img class="sprite pillow" src="assets/pat-pillow.png" alt="" draggable="false">
+            </div>
+            <div class="pet-form click-form" id="clickForm" aria-hidden="true">
+              <img class="sprite rabbit-ear ear-left" src="assets/click-ear-left-up.png" alt="" draggable="false">
+              <img class="sprite rabbit-ear ear-right" src="assets/click-ear-right-up.png" alt="" draggable="false">
+              <img class="sprite click-core" src="assets/click-core.png" alt="" draggable="false">
+              <img class="sprite click-tuft" src="assets/click-tuft-up.png" alt="" draggable="false">
+            </div>
+            <div class="sleep-marks" id="sleepMarks" aria-hidden="true"><span>z</span><span>z</span><span>Z</span></div>
+          </div>
+          <div class="effects" id="effects" aria-hidden="true"></div>
+          <img class="paw" id="paw" src="assets/paw-cursor.png" alt="" aria-hidden="true" draggable="false">
+        </div>
+        <div class="scene-status"><span class="status-dot"></span><span id="petStatus">正在陪你发呆</span></div>
+      </div>
+      <div class="interaction-bar">
+        <div class="interaction-intro"><span>给她一点回应</span><span id="affectionLabel">♡ 亲密度 0</span></div>
+        <div class="action-grid" id="quickActions">
+          <button type="button" data-action="pat"><span>✋</span>摸摸头</button>
+          <button type="button" data-action="hug"><span>♡</span>抱一抱</button>
+          <button type="button" data-action="praise"><span>✦</span>夸夸她</button>
+          <button type="button" data-action="tease"><span>☺</span>逗逗她</button>
+          <button type="button" data-action="rps"><span>✌</span>猜个拳</button>
+          <button type="button" data-action="sleep"><span>☾</span>说晚安</button>
+          <button type="button" data-action="again"><span>↻</span>再来一次</button>
+        </div>
+        <p class="interaction-hint">悬停头顶摸摸她 · 点击看兔耳 · 手机也可以直接点按钮</p>
+      </div>
+    </section>
+    <section class="chat-panel" aria-label="和伊蕾娜聊天">
+      <header class="chat-header"><div class="chat-avatar"><img src="assets/idle.png" alt=""></div><div><h1>和伊蕾娜待一会儿</h1><p id="chatMode">本地互动 · 随时回应你</p></div><span class="online-dot" title="已准备好"></span></header>
+      <div class="messages" id="messages" role="log" aria-live="polite" aria-relevant="additions" aria-label="聊天记录"></div>
+      <div class="rps-options" id="rpsOptions" hidden><span>准备好了？</span><button data-choice="石头">石头</button><button data-choice="剪刀">剪刀</button><button data-choice="布">布</button></div>
+      <form id="chatForm" class="chat-form"><label class="sr-only" for="chatInput">给伊蕾娜说句话</label><textarea id="chatInput" maxlength="500" rows="2" placeholder="说“抱抱”“叫我小星”，或聊聊今天…"></textarea><div class="composer-bottom"><span>Enter 发送 · Shift + Enter 换行</span><button id="sendButton" class="primary-button" type="submit">发送 <span>↗</span></button></div></form>
+      <details class="ai-details" id="aiDetails"><summary>想自由聊天？启用浏览器本地 AI <span>可选</span></summary><p>互动按钮和常用短句无需模型。自由聊天需首次下载约 400 MB 模型并占用显存，在支持 WebGPU 的浏览器本地运行；消息不上传，模型文件来自公共下载站。手机可能无法运行，建议连接 Wi-Fi 后启用。</p><button class="outline-button" type="button" id="enableAI">检查并启用本地 AI</button><p id="aiStatus" class="ai-status" role="status">未启用 · 当前回复来自本地互动规则</p><progress id="aiProgress" max="1" value="0" hidden aria-label="模型下载进度"></progress></details>
+    </section>
+  </main>
+  <footer class="room-footer"><div class="room-tools"><button id="focusOpen" type="button"><span>◷</span> 一起专注 <b id="focusMini"></b></button><button id="wardrobeOpen" type="button"><span>✿</span> 小窝装扮 <b id="starsLabel">0 星</b></button><button id="nicknameOpen" type="button"><span>♡</span> 你的称呼</button></div><p>这是浏览器体验版。桌面悬浮、自启动与本机模型请使用 Windows 版。</p></footer>
+  <dialog id="focusDialog"><form method="dialog" class="dialog-heading"><h2>陪你专注一小会儿</h2><button aria-label="关闭" class="close-button">×</button></form><p class="muted">你做你的事，我在旁边安静地陪着你。</p><div class="timer-display" id="timerDisplay">25:00</div><p class="timer-note" id="timerNote">完成一次，收下一颗小星星。</p><label class="demo-label"><input id="demoMode" type="checkbox"> 演示模式：25 秒体验一次完整专注</label><div class="dialog-buttons"><button class="primary-button" id="focusStart">开始专注</button><button class="outline-button" id="focusPause" disabled>暂停</button><button class="quiet-button" id="focusEnd" disabled>结束</button></div><p class="small-note">普通模式：25 分钟，完成获 5 星；提前结束满 5 分钟获 1 星。演示完成获 1 星。刷新页面会结束当前计时。</p></dialog>
+  <dialog id="wardrobeDialog"><form method="dialog" class="dialog-heading"><h2>给小窝添一点颜色</h2><button aria-label="关闭" class="close-button">×</button></form><p class="muted">专注积攒小星星，装点属于你们的小房间。</p><div class="wardrobe-balance">✦ <strong id="shopStars">0</strong> 颗小星星</div><div class="shop-items"><button class="shop-item" data-rug="blue"><span class="rug-swatch blue"></span><span>晴空软毯<small>已拥有</small></span><b>使用</b></button><button class="shop-item" data-rug="pink"><span class="rug-swatch pink"></span><span>桃桃软毯<small>3 星解锁</small></span><b>解锁</b></button><button class="shop-item" data-rug="violet"><span class="rug-swatch violet"></span><span>月光软毯<small>5 星解锁</small></span><b>解锁</b></button></div><p class="small-note" id="shopNote" role="status">已解锁的装扮可以随时免费切换。</p></dialog>
+  <dialog id="nicknameDialog"><form id="nicknameForm"><div class="dialog-heading"><h2>我该怎么称呼你？</h2><button type="button" class="close-button" id="nicknameClose" aria-label="关闭">×</button></div><label for="nicknameInput" class="muted">一个只属于你的小称呼</label><input id="nicknameInput" type="text" maxlength="16" placeholder="例如：小星" autocomplete="nickname"><button class="primary-button" type="submit">记住这个名字</button><p class="small-note">称呼、亲密度和装扮只保存在此浏览器，不会上传。聊天记录只保留在本页，刷新即清空。</p></form></dialog>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

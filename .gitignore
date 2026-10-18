@@ -1,0 +1,24 @@
+# Local memories and user data
+config.json
+config.json.*
+*.log
+*.tmp
+*.bak
+.env
+.env.*
+
+# Optional local model/runtime downloads
+*.gguf
+*.download
+*.zip
+*.tar
+*.tar.gz
+desktop/local-chat/runtime/
+desktop/local-chat/downloads/
+
+# Development-only output
+node_modules/
+work/
+preview-*/
+.DS_Store
+Thumbs.db

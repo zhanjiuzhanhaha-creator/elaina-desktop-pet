@@ -1,0 +1,20 @@
+{
+  "runtime": {
+    "project": "ggml-org/llama.cpp",
+    "tag": "b11718",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11718/llama-b11718-bin-win-cpu-x64.zip",
+    "sha256": "92cc529b29a43f9a30e21d490cb2e95062acd0b59af6fee8b3b52b28074f838c",
+    "license": "MIT",
+    "license_url": "https://github.com/ggml-org/llama.cpp/blob/b11718/LICENSE"
+  },
+  "model": {
+    "project": "Qwen/Qwen3-0.6B-GGUF",
+    "file": "Qwen3-0.6B-Q8_0.gguf",
+    "size": 639446688,
+    "url": "https://huggingface.co/Qwen/Qwen3-0.6B-GGUF",
+    "download_url": "https://modelscope.cn/models/Qwen/Qwen3-0.6B-GGUF/resolve/master/Qwen3-0.6B-Q8_0.gguf",
+    "sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+    "license": "Apache-2.0",
+    "license_url": "https://huggingface.co/Qwen/Qwen3-0.6B-GGUF/blob/main/LICENSE"
+  }
+}
